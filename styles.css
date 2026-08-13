@@ -32,3 +32,39 @@
   line-height: 1.75;
   max-width: 720px;
 }
+/* BOTÃO WHATSAPP - MOBILE + DESTAQUE */
+@media (max-width: 620px) {
+  .hero-copy {
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero-copy .js-whatsapp {
+    position: relative;
+    z-index: 30;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+
+  .hero-photo-wrap,
+  .hero-photo-frame {
+    z-index: 1;
+  }
+}
+
+/* BRILHO DO BOTÃO */
+.hero-copy .js-whatsapp {
+  animation: whatsappPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(232, 184, 92, 0.35);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 22px 6px rgba(232, 184, 92, 0.55);
+    transform: scale(1.03);
+  }
+}
